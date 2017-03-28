@@ -22,7 +22,9 @@ Forwarder : filebeat port 5044
     cd ~
     git clone https://github.com/easonlau02/elasticstack.git
 
+
 ## All 3 components(ELK) in one machine
+---
 
 #### Change below `~/elasticstack/.env` file only
     # ~/elasticstack/.env
@@ -72,7 +74,7 @@ Forwarder : filebeat port 5044
     docker-compose up -d
     
 ## Not all 3 in one machine
-
+---
 #### Three .env you might change. But will simpler than before
 `~/elasticstack/elasticsearch/.env`
 
@@ -110,6 +112,7 @@ Forwarder : filebeat port 5044
 * [`~/elasticstack/elascticsearch/docker-compose.yml`](https://github.com/easonlau02/elasticstack/blob/master/elasticsearch/docker-compose.yml)
 * [`~/elasticstack/logstash/docker-compose.yml`](https://github.com/easonlau02/elasticstack/blob/master/logstash/docker-compose.yml)
 * [`~/elasticstack/kibana/docker-compose.yml`](https://github.com/easonlau02/elasticstack/blob/master/kibana/docker-compose.yml)
+
 #### Startup ELK service at corresponding machine respectively.
 **Elasticsearch at host1**:
     
@@ -127,6 +130,7 @@ Forwarder : filebeat port 5044
     docker-compose up -d
 
 ## Access kibana via `<kibanahost>:5601`, you can see below screenshot
-![alt text](https://raw.githubusercontent.com/easonlau02/elasticstack/master/kibana_up.png "kibana_up")
+---
+![](https://raw.githubusercontent.com/easonlau02/elasticstack/master/kibana_up.png "kibana_up")
 
 You can see **Unable to fetch mapping. Do you have indices match...**, caused by no log feed.
