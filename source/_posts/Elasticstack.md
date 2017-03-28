@@ -66,7 +66,7 @@ Forwarder : filebeat port 5044
         environment:
           - env=${environment}
         extra_hosts:
-          - "elasticsearchHost:*${K_ELASTICSEARCH_HOST_IP}*"
+          - "elasticsearchHost:${K_ELASTICSEARCH_HOST_IP}"
         ...
         
 #### Startup ELK service at one machine
